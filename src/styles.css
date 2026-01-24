@@ -1,0 +1,139 @@
+
+.wrapper {
+  max-width: 1200px;   /* controls left & right space */
+  margin: 0 auto;      /* centers the content */
+  padding: 20px;
+}
+
+  .navbar {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background: white;
+  }
+  .nav-links{
+    border-radius: 50px;
+    border: 1px solid #000000;
+    padding: 6px 12px;
+    margin: 10px;
+  }
+
+  .nav-links a {
+    margin: 30px;
+    text-decoration: none;
+    color: black;
+  }
+  .btn{
+    padding: 8px 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  background-color: #ffffff;
+  }
+  .nav-line {
+    height: 1px;
+    background: #000000;
+    
+  }
+  .search-box {
+    margin: 20px;
+  }
+  
+  .search-box input {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  .container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    flex: 3;
+    
+  }
+  
+  .card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #000000;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+  }
+  
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+  }
+  .add-btn {
+    background: #6c3cff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background: #5a2ee0;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    margin-left: 5px;
+    border-radius: 10px;
+  }
+  
+  .primary {
+    background: purple;
+    color: white;
+  }
+  
+  .full {
+    width: 100%;
+  }
+  
+  .category-box {
+    background: white;
+    padding: 15px;
+    margin-left: 20px;
+    height: fit-content;
+    border-radius: 20px;
+  border: 1px solid #000000;
+  }
+  .tag{
+    
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 14px;
+      background: #87818d;       
+      color: rgb(0, 0, 0);
+      border-radius: 50px; 
+      border: 1px solid black;      
+      font-size: 12px;
+      font-weight: 500;
+    
+  }
+  
