@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "../services/authApi";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    try {
+      const res = await loginUser(email, password);
+      console.log(res.data);   // access_token
+
+      alert("Login successful");
+      navigate("/products");
+    } catch (err) {
+      alert("Invalid email or password");
+    }
+  };
 
   return (
     <div className="auth-wrapper">
@@ -10,16 +26,30 @@ const Login = () => {
         <h2 className="auth-title">Login</h2>
 
         <label>Email Address</label>
-        <input type="email" />
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
         <label>Password</label>
-        <input type="password" />
-        <div className="auth-actions">
-        <button className="auth-primary-btn">Login</button>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        <button className="switch-btn" onClick={() => navigate("/auth/signup")}>
-          Sign Up
-        </button>
+        <div className="auth-actions">
+          <button className="auth-primary-btn" onClick={handleLogin}>
+            Login
+          </button>
+
+          <button
+            className="switch-btn"
+            onClick={() => navigate("/auth/signup")}
+          >
+            Sign Up
+          </button>
         </div>
       </div>
     </div>
