@@ -19,7 +19,7 @@ const Products = () => {
     selected === "all"
       ? products
       : products.filter(
-          (p) => p.category.name === selected
+          (p) => p.category === selected
         );
 
   return (

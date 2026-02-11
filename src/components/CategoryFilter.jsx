@@ -12,7 +12,7 @@ const CategoryFilter = ({ categories, setSelected, selected }) => {
 
       {categories.map((cat) => (
         <p
-          key={cat.id}
+          key={cat._id}
           className={selected === cat.name ? "active" : ""}
           onClick={() => setSelected(cat.name)}
         >

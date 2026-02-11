@@ -1,14 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.escuelajs.co/api/v1";
+const BASE_URL = "http://localhost:5000/api";
 
-export const loginUser = (email, password) => {
-  return axios.post(`${BASE_URL}/auth/login`, {
-    email,
-    password,
-  });
+export const loginUser = (data) => {
+  return axios.post(`${BASE_URL}/auth/login`, data);
 };
 
 export const signupUser = (data) => {
-  return axios.post(`${BASE_URL}/users`, data);
+  return axios.post(`${BASE_URL}/auth/signup`, data);
 };
